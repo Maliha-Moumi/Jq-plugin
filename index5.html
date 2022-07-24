@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Hueristics</title>
+		<link href="plugin/color-transitions-hueristics/assets/css/style.css" type="text/css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="plugin/color-transitions-hueristics/assets/js/jquery.hueristics.1.0.js"></script>
+	</head>
+	<body>
+	<div id="mask"></div>
+	<div class="stars" id="back"></div>
+	<div class="stars" id="middle"></div>
+	<div class="stars" id="front"></div>
+	<script>
+	$(function(){
+		// fade out black mask on load for smooth page reveal
+		$('div#mask').fadeOut(5000);
+
+		// call hueristics plugin with default params
+		// this will change the page background color
+		// which will 'shine' through the transparent
+		// body background image.
+		$('body').hueristics();
+
+
+		// unneccesary (but fun!) function to swirl the stars
+		var s=0,b=0,m=0,f=0,timer;
+		function stars(b,m,f,distance){
+		    // set relative distance to move layers
+			b+=distance[0];
+			m+=distance[1];
+			f+=distance[2];
+			// move position right and left
+			$('div.stars#back').css('background-position',b+'px 0px');
+			$('div.stars#middle').css('background-position',m+'px 0px');
+			$('div.stars#front').css('background-position',f+'px 0px');
+			// do it again
+			timer = setTimeout(function(){
+                stars(b,m,f,distance)
+            },20);
+		}
+		stars(0,0,0,[.5,-.5,-1]);
+		// end star animate function
+
+
+	})
+	</script>
+	</body>
+</html>

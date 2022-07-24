@@ -1,0 +1,82 @@
+body{
+    font-family: "Inter";
+    background-color: #fafafa;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    padding: 0.5em;
+    font-size: 3em;
+}
+section{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+span{
+    font-size: 2em;
+    cursor: pointer;
+}
+main{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+main div{
+    width: 10%;
+    height: 350px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.slide{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+.slide li{
+    padding: 10px;
+    border: 2px solid #1c1c1c;
+    border-radius: 50%;
+    margin-right: 0.8em;
+}
+.fived{
+    margin-right: 0;
+}
+
+.a{
+    width: 50%;
+}
+.b{
+    background-color: #1c1c1c;
+}
+.c{
+    pointer-events: none;
+}
+
+.one{
+    background-color: #3d5a80;
+}
+.two{
+    background-color: #98c1d9;
+}
+.three{
+    background-color: #e0fbfc;
+}
+.four{
+    background-color: #ee6c4d;
+}
+.five{
+    background-color: #293241;
+}
